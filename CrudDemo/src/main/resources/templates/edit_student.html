@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+</head>
+
+<body>
+    <h1>Edit Student</h1>
+    <form th:action="@{/students/{id}(id=${student.id})}" method="POST" th:object="${student}">
+    <label>Name</label>
+    <input type="text" th:field="*{name}">
+    <label>Email</label>
+    <input type="email" th:field="*{email}">
+    <label>Course</label>
+    <input type="text" th:field="*{course}">
+    <button type="submit">Update</button>
+    </form>
+</body>
+
+</html>
